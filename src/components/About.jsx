@@ -66,16 +66,16 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative"
             >
-              <div className="relative w-80 h-80 mx-auto lg:mx-0">
-                {/* Placeholder for profile image */}
-                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-2xl">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-white">AK</span>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">Profile Image Placeholder</p>
-                  </div>
-                </div>
+                             <div className="relative w-80 h-80 mx-auto lg:mx-0">
+                 {/* Profile Image */}
+                 <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+                   <img 
+                     src="/profile-image.jpg" 
+                     alt="Amar Khatal - AI Engineer, Software Developer, Data Analyst"
+                     className="w-full h-full object-cover object-center"
+                     loading="lazy"
+                   />
+                 </div>
                 
                 {/* Floating elements */}
                 <motion.div
