@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FileText, Eye, Share2, Calendar, User, Award } from 'lucide-react';
+import { FileText, Calendar, User, Award } from 'lucide-react';
 
 const Resume = () => {
   const ref = useRef(null);
@@ -9,24 +9,7 @@ const Resume = () => {
 
 
 
-  const viewResume = () => {
-    // Open resume in new tab
-    window.open('/resume.pdf', '_blank');
-  };
 
-  const shareResume = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'Amar Khatal - Resume',
-        text: 'Check out my resume for AI Engineer, Software Developer, and Data Analyst positions',
-        url: window.location.href
-      });
-    } else {
-      // Fallback: copy URL to clipboard
-      navigator.clipboard.writeText(window.location.href);
-      alert('Resume link copied to clipboard!');
-    }
-  };
 
   const resumeStats = [
     {
@@ -163,36 +146,7 @@ const Resume = () => {
                 </div>
               </div>
 
-              {/* Action Options */}
-              <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <motion.button
-                    onClick={viewResume}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6, delay: 0.9 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl border-2 border-primary-200 dark:border-primary-800 hover:border-primary-400 dark:hover:border-primary-600 transition-all duration-300"
-                  >
-                    <Eye size={20} />
-                    View Online
-                  </motion.button>
 
-                  <motion.button
-                    onClick={shareResume}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6, delay: 1.0 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl border-2 border-secondary-200 dark:border-secondary-800 hover:border-secondary-400 dark:hover:border-secondary-600 transition-all duration-300"
-                  >
-                    <Share2 size={20} />
-                    Share
-                  </motion.button>
-                </div>
-              </div>
             </motion.div>
 
             {/* Resume Content Preview */}
