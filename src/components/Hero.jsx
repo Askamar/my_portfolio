@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Eye, ChevronDown } from 'lucide-react';
+import { Eye, ChevronDown } from 'lucide-react';
 import ParticleBackground from './ParticleBackground';
 
 const Hero = () => {
@@ -39,13 +39,7 @@ const Hero = () => {
     }
   };
 
-  const downloadResume = () => {
-    // Placeholder for resume download
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Update with actual resume path
-    link.download = 'Amar_Khatal_Resume.pdf';
-    link.click();
-  };
+
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20">
@@ -76,12 +70,12 @@ const Hero = () => {
             {tagline}
           </motion.p>
 
-          {/* Action Buttons */}
+          {/* Action Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            className="flex justify-center items-center mb-12"
           >
             <motion.button
               onClick={scrollToProjects}
@@ -95,16 +89,6 @@ const Hero = () => {
                 className="w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"
                 initial={false}
               />
-            </motion.button>
-
-            <motion.button
-              onClick={downloadResume}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="group flex items-center gap-2 px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-full font-semibold text-lg border-2 border-primary-600 hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              <Download size={20} />
-              Download Resume
             </motion.button>
           </motion.div>
 

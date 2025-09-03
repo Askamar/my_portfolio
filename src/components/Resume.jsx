@@ -145,8 +145,6 @@ const Resume = () => {
                   </ul>
                 </div>
               </div>
-
-
             </motion.div>
 
             {/* Resume Content Preview */}
