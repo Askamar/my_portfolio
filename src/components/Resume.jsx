@@ -1,19 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Download, FileText, Eye, Share2, Calendar, User, Award } from 'lucide-react';
+import { FileText, Eye, Share2, Calendar, User, Award } from 'lucide-react';
 
 const Resume = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const downloadResume = () => {
-    // Create a link element to trigger download
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Update with actual resume path
-    link.download = 'Amar_Khatal_Resume.pdf';
-    link.click();
-  };
+
 
   const viewResume = () => {
     // Open resume in new tab
@@ -96,7 +90,7 @@ const Resume = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
             >
-              Download my comprehensive resume showcasing my skills, experience, and achievements
+              View my comprehensive resume showcasing my skills, experience, and achievements
             </motion.p>
             <motion.div
               initial={{ width: 0 }}
@@ -169,27 +163,14 @@ const Resume = () => {
                 </div>
               </div>
 
-              {/* Download Options */}
+              {/* Action Options */}
               <div className="space-y-4">
-                <motion.button
-                  onClick={downloadResume}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                  transition={{ duration: 0.6, delay: 0.9 }}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Download size={24} />
-                  Download Resume (PDF)
-                </motion.button>
-
                 <div className="grid grid-cols-2 gap-4">
                   <motion.button
                     onClick={viewResume}
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6, delay: 1.0 }}
+                    transition={{ duration: 0.6, delay: 0.9 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl border-2 border-primary-200 dark:border-primary-800 hover:border-primary-400 dark:hover:border-primary-600 transition-all duration-300"
@@ -202,7 +183,7 @@ const Resume = () => {
                     onClick={shareResume}
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6, delay: 1.1 }}
+                    transition={{ duration: 0.6, delay: 1.0 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl border-2 border-secondary-200 dark:border-secondary-800 hover:border-secondary-400 dark:hover:border-secondary-600 transition-all duration-300"
@@ -294,7 +275,7 @@ const Resume = () => {
                   Ready to Connect?
                 </h4>
                 <p className="text-sm mb-4 opacity-90">
-                  Download my resume and let's discuss how I can contribute to your team!
+                  View my resume and let's discuss how I can contribute to your team!
                 </p>
                 <motion.button
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
