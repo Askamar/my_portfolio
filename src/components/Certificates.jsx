@@ -12,6 +12,7 @@ const Certificates = () => {
     {
       id: 1,
       title: "AI Aware Badge",
+      url: "https://ai-for-all.in/#/badge?id=U2FsdGVkX18c7jnVYfWC8AgxksmMYEg1xC3q571L5QUe1Q2u3A4l",
       issuer: "Intel",
       date: "AUG 2025",
       description: "Comprehensive understanding of AI fundamentals and applications in real-world scenarios.",
@@ -23,6 +24,7 @@ const Certificates = () => {
     {
       id: 2,
       title: "Cisco IoT Fundamentals",
+      url: "https://www.linkedin.com/in/amarkhatal2005/details/certifications/1752146049542/single-media-viewer/?profileId=ACoAAEZ2R7gB22C2v5re4iJnIJh5PKb_cfkcl_A",
       issuer: "Cisco",
       date: "JUL 2025",
       description: "Fundamentals of Internet of Things, networking protocols, and IoT security principles.",
@@ -34,6 +36,7 @@ const Certificates = () => {
     {
       id: 3,
       title: "MongoDB Introduction",
+      url: "https://learn.mongodb.com/c/fcRIviPvRtGwwcWo9Rg28g",
       issuer: "MongoDB University",
       date: "Jun 2025",
       description: "Introduction to NoSQL databases, MongoDB operations, and data modeling techniques.",
@@ -45,6 +48,7 @@ const Certificates = () => {
     {
       id: 4,
       title: "NVIDIA AI for All",
+      url: "https://www.linkedin.com/in/amarkhatal2005/details/certifications/1752314678914/single-media-viewer/?profileId=ACoAAEZ2R7gB22C2v5re4iJnIJh5PKb_cfkcl_A",
       issuer: "NVIDIA",
       date: "May 2025",
       description: "Comprehensive AI education covering machine learning, deep learning, and AI applications.",
@@ -56,6 +60,7 @@ const Certificates = () => {
     {
       id: 5,
       title: "Janatics Challenge",
+      url: "https://www.linkedin.com/in/amarkhatal2005/details/certifications/1748444024277/single-media-viewer/?profileId=ACoAAEZ2R7gB22C2v5re4iJnIJh5PKb_cfkcl_A",
       issuer: "Janatics Automation",
       date: "May 2025",
       description: "Competition in automation and robotics, showcasing practical problem-solving skills.",
@@ -67,6 +72,7 @@ const Certificates = () => {
     {
       id: 6,
       title: "SQL Certification",
+      url: "https://www.hackerrank.com/certificates/4bacbc545b2b",
       issuer: "HackerRank",
       date: "May 2025",
       description: "Advanced SQL skills including complex queries, database optimization, and data analysis.",
@@ -78,6 +84,7 @@ const Certificates = () => {
     {
       id: 7,
       title: "NPTEL Soft Skills",
+      url: "https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/109/noc24-hs26/Course/NPTEL24HS26S46520365530394112.pdf",
       issuer: "NPTEL",
       date: "May 2024",
       description: "Professional development focusing on communication, leadership, and teamwork skills.",
@@ -89,6 +96,7 @@ const Certificates = () => {
     {
       id: 8,
       title: "Excel for Data Analysis",
+      url: "https://www.linkedin.com/learning/certificates/addeed9ed95e9702709c8e211ad5410da196ae6223cdddb2f16fb669721250c3",
       issuer: "LinkedIn Learning",
       date: "May 2024",
       description: "Advanced Excel techniques for data analysis, visualization, and business intelligence.",
@@ -100,6 +108,7 @@ const Certificates = () => {
     {
       id: 9,
       title: "Adobe India hackathon",
+      url: "https://unstop.com/certificate-preview/6982a560-5edb-446e-a21e-c63d204713f4",
       issuer: "Adobe",
       date: "Aug 2025",
       description: "Participation in the Adobe India hackathon, showcasing creativity and problem-solving skills.",
@@ -111,6 +120,7 @@ const Certificates = () => {
     {
       id: 10,
       title: "Red Hat Application Development I:Programming in Java EE(AD 183-RHA)-ver.7.0",
+      url: "https://www.linkedin.com/in/amarkhatal2005/overlay/1762174183791/single-media-viewer/?profileId=ACoAAEZ2R7gB22C2v5re4iJnIJh5PKb_cfkcl_A",
       issuer: "Red Hat",
       date: "OCT 2025",
       description: "Advanced Java EE programming skills, focusing on enterprise application development and system architecture.",
@@ -264,17 +274,27 @@ const Certificates = () => {
                   </span>
                   
                   {/* View Certificate Button */}
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                  </motion.button>
+                  {certificate.url ? (
+                    <motion.a
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      href={certificate.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${certificate.title} certificate`}
+                      className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors inline-flex items-center"
+                    >
+                      <ExternalLink size={16} />
+                    </motion.a>
+                  ) : (
+                    <span className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-400 opacity-50 inline-flex items-center">
+                      <ExternalLink size={16} />
+                    </span>
+                  )}
                 </div>
 
-                {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-secondary-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                {/* Hover Effect Overlay (non-interactive so it doesn't block links) */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-secondary-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
               </motion.div>
             ))}
           </motion.div>

@@ -12,13 +12,13 @@ const Footer = () => {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/amarkhatal",
+      url: "https://github.com/Askamar",
       color: "hover:text-gray-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/amarkhatal",
+      url: "https://linkedin.com/in/amarkhatal2005",
       color: "hover:text-blue-400"
     },
     {
@@ -57,7 +57,7 @@ const Footer = () => {
               className="lg:col-span-2"
             >
               <h3 className="text-2xl font-bold gradient-text mb-4">
-                Amar
+                Amar Khatal
               </h3>
               <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
                 Aspiring AI Engineer. 
@@ -145,7 +145,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="text-gray-400 text-sm flex items-center gap-2"
             >
-              © {currentYear} Amar. Made with
+              © {currentYear} Amar Khatal. Made with
               <Heart size={16} className="text-red-500 animate-pulse" />
               and lots of coffee.
             </motion.p>

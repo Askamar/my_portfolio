@@ -17,16 +17,17 @@ const Education = () => {
     gpa: "8.91",
     description: "Comprehensive program combining computer science fundamentals with business systems knowledge, preparing for roles in technology and business integration.",
     highlights: [
-      "Strong foundation in programming languages (C, C++, Python)",
+      "Strong foundation in programming languages (C, C++, Python,java)",
       "Database management and data structures",
       "Software engineering principles and methodologies",
-      "Business systems analysis and design",
-      "Project management and team collaboration",
+      "Computer Network and it's applications",
+      "Operating System and it's applications",
+      "Data Structures and Algorithms",
       "Industry-relevant curriculum with practical applications"
     ],
     achievements: [
       "Consistently maintaining high academic performance",
-      "Active participation in technical clubs and societies",
+      "Active participation in technical clubs and societies meetups and events",
       "Completed multiple hands-on projects",
       "Engaged in continuous learning and skill development"
     ]

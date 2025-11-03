@@ -66,13 +66,13 @@ const Contact = () => {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/amarkhatal",
+      url: "https://github.com/Askamar",
       color: "from-gray-700 to-gray-800"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/amarkhatal",
+      url: "https://linkedin.com/in/amarkhatal2005",
       color: "from-blue-600 to-blue-700"
     },
     {

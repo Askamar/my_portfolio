@@ -24,7 +24,7 @@ const Skills = () => {
         { name: "Python", level: 90, color: "from-yellow-400 to-orange-500" },
         { name: "C++", level: 85, color: "from-blue-500 to-blue-600" },
         { name: "C", level: 80, color: "from-gray-600 to-gray-700" },
-        { name: "JavaScript", level: 75, color: "from-yellow-500 to-yellow-600" },
+        { name: "Java", level: 85, color: "from-yellow-500 to-yellow-600" },
       ]
     },
     {
@@ -42,8 +42,8 @@ const Skills = () => {
       skills: [
         { name: "Machine Learning", level: 85, color: "from-pink-500 to-rose-500" },
         { name: "AI/ML", level: 80, color: "from-indigo-500 to-purple-500" },
-        { name: "Data Science", level: 82, color: "from-cyan-500 to-blue-500" },
-        { name: "Automation", level: 88, color: "from-orange-500 to-red-500" },
+        { name: "Deep Learning", level: 60, color: "from-cyan-500 to-blue-500" },
+        { name: "Data Analysis", level: 88, color: "from-orange-500 to-red-500" },
       ]
     },
     {
@@ -51,7 +51,7 @@ const Skills = () => {
       icon: Settings,
       skills: [
         { name: "Web Development", level: 75, color: "from-emerald-500 to-teal-500" },
-        { name: "Robotics", level: 70, color: "from-slate-500 to-gray-600" },
+        { name: "Eclipse IDE", level: 70, color: "from-slate-500 to-gray-600" },
         { name: "Git/GitHub", level: 85, color: "from-gray-700 to-gray-800" },
         { name: "Linux", level: 78, color: "from-orange-600 to-yellow-600" },
       ]

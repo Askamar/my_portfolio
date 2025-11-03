@@ -8,7 +8,7 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const fullText = "Amar | Aspiring AI Engineer";
+  const fullText = "Amar Khatal | Aspiring AI Engineer";
   const tagline = "Blending AI, Automation, and Business Systems to create real-world solutions.";
 
   useEffect(() => {

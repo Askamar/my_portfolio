@@ -98,7 +98,7 @@ const Resume = () => {
                     <FileText className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    Amar
+                    Amar Khatal
                   </h3>
                   <p className="text-primary-600 dark:text-primary-400 font-semibold">
                     AI Engineer | Software Developer | Data Analyst
@@ -207,11 +207,11 @@ const Resume = () => {
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="font-semibold">LinkedIn:</span>
-                    <span>linkedin.com/in/amarkhatal</span>
+                    <span>linkedin.com/in/amarkhatal2005</span>
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="font-semibold">GitHub:</span>
-                    <span>github.com/amarkhatal</span>
+                    <span>github.com/Askamar</span>
                   </p>
                 </div>
               </div>

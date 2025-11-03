@@ -1,4 +1,4 @@
-# Amar - Portfolio Website
+# Amar Khatal - Portfolio Website
 
 A modern, responsive portfolio website showcasing my work as an aspiring AI Engineer, Software Developer, and Data Analyst.
 
@@ -65,7 +65,7 @@ src/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/amarkhatal/portfolio.git
+git clone https://github.com/AmarKhatal/portfolio.git
 cd portfolio
 ```
 
@@ -123,8 +123,8 @@ The built files will be in the `dist` directory.
 ## 📧 Contact
 
 - **Email**: amarkhatal2005@gmail.com
-- **LinkedIn**: [linkedin.com/in/amarkhatal](https://linkedin.com/in/amarkhatal)
-- **GitHub**: [github.com/amarkhatal](https://github.com/amarkhatal)
+- **LinkedIn**: [linkedin.com/in/amarkhatal2005](https://linkedin.com/in/amarkhatal2005)
+- **GitHub**: [github.com/Askamar](https://github.com/Askamar)
 - **Location**: Pune, Maharashtra, India
 
 ## 📄 License
@@ -133,7 +133,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/amarkhatal/portfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Askamar/portfolio/issues).
 
 ## 🙏 Acknowledgments
 
@@ -144,4 +144,4 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ---
 
-Made with ❤️ and lots of coffee by Amar Khatal
+Made with ❤️ and lots of coffee by Amar Khatal Khatal

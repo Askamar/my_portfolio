@@ -18,7 +18,7 @@ const Projects = () => {
       technologies: ["Python", "Machine Learning", "Pandas", "Scikit-learn", "Data Visualization"],
       category: "AI",
       github: "https://github.com/Askamar/GHG_Emission_Prediction",
-      live: "#",
+  
       featured: true
     },
     {
@@ -241,17 +241,7 @@ const Projects = () => {
                         <Github size={16} />
                         Code
                       </motion.a>
-                      <motion.a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-lg hover:shadow-lg transition-all text-sm font-medium"
-                      >
-                        <ExternalLink size={16} />
-                        Live Demo
-                      </motion.a>
+                      
                     </div>
                   </div>
                 </motion.div>
@@ -267,7 +257,7 @@ const Projects = () => {
             className="text-center mt-12"
           >
             <motion.a
-              href="https://github.com/amarkhatal"
+              href="https://github.com/Askamar"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
