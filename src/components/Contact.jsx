@@ -42,14 +42,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "amarkhatal@example.com",
-      link: "mailto:amarkhatal@example.com",
+      value: "amarkhatal2005@gmail.com",
+      link: "mailto:amarkhatal2005@gmail.com",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 98765 43210",
+      value: "+91 8788354024",
       link: "tel:+919876543210",
       color: "from-green-500 to-green-600"
     },

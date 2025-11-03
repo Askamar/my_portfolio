@@ -1,4 +1,4 @@
-# Amar Khatal - Portfolio Website
+# Amar - Portfolio Website
 
 A modern, responsive portfolio website showcasing my work as an aspiring AI Engineer, Software Developer, and Data Analyst.
 
@@ -122,7 +122,7 @@ The built files will be in the `dist` directory.
 
 ## 📧 Contact
 
-- **Email**: amarkhatal@example.com
+- **Email**: amarkhatal2005@gmail.com
 - **LinkedIn**: [linkedin.com/in/amarkhatal](https://linkedin.com/in/amarkhatal)
 - **GitHub**: [github.com/amarkhatal](https://github.com/amarkhatal)
 - **Location**: Pune, Maharashtra, India

@@ -28,13 +28,12 @@ const Skills = () => {
       ]
     },
     {
-      category: "Data & Analytics",
+      category: "Databases",
       icon: Database,
       skills: [
         { name: "SQL", level: 90, color: "from-blue-400 to-blue-600" },
-        { name: "MongoDB", level: 80, color: "from-green-500 to-green-600" },
-        { name: "Data Analysis", level: 85, color: "from-purple-500 to-purple-600" },
-        { name: "Excel", level: 88, color: "from-green-600 to-green-700" },
+        { name: "MongoDB", level: 80, color: "from-green-500 to-green-600" }
+          
       ]
     },
     {

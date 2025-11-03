@@ -8,7 +8,7 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const fullText = "Amar Khatal | Aspiring AI Engineer";
+  const fullText = "Amar | Aspiring AI Engineer";
   const tagline = "Blending AI, Automation, and Business Systems to create real-world solutions.";
 
   useEffect(() => {
@@ -92,23 +92,7 @@ const Hero = () => {
             </motion.button>
           </motion.div>
 
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.button
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-            >
-              <span className="text-sm mb-2">Scroll to explore</span>
-              <ChevronDown size={24} />
-            </motion.button>
-          </motion.div>
+         
         </div>
       </div>
 

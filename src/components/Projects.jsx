@@ -17,7 +17,7 @@ const Projects = () => {
       image: "/api/placeholder/400/250",
       technologies: ["Python", "Machine Learning", "Pandas", "Scikit-learn", "Data Visualization"],
       category: "AI",
-      github: "https://github.com/amarkhatal/greenhouse-emission-prediction",
+      github: "https://github.com/Askamar/GHG_Emission_Prediction",
       live: "#",
       featured: true
     },
@@ -28,8 +28,8 @@ const Projects = () => {
       image: "/api/placeholder/400/250",
       technologies: ["C++", "File I/O", "Data Structures", "OOP", "System Design"],
       category: "Web",
-      github: "https://github.com/amarkhatal/hospital-management",
-      live: "#",
+      github: "https://github.com/Askamar/hospital_management_system",
+      
       featured: true
     },
     {
@@ -39,41 +39,7 @@ const Projects = () => {
       image: "/api/placeholder/400/250",
       technologies: ["Python", "NLP", "Machine Learning", "Text Processing", "Classification"],
       category: "AI",
-      github: "https://github.com/amarkhatal/email-spam-detection",
-      live: "#",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Data Analysis Dashboard",
-      description: "Interactive dashboard for analyzing business metrics and KPIs. Features real-time data visualization, filtering, and export capabilities.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Data Analysis"],
-      category: "Data",
-      github: "https://github.com/amarkhatal/data-dashboard",
-      live: "#",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Automated Testing Framework",
-      description: "Custom automation framework for testing web applications. Includes test case management, reporting, and CI/CD integration.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Python", "Selenium", "Pytest", "Automation", "Testing"],
-      category: "Web",
-      github: "https://github.com/amarkhatal/automation-framework",
-      live: "#",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Stock Market Predictor",
-      description: "Machine learning model for stock price prediction using historical data and technical indicators. Features risk assessment and portfolio optimization.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Python", "TensorFlow", "Financial Data", "Time Series", "ML"],
-      category: "Data",
-      github: "https://github.com/amarkhatal/stock-predictor",
-      live: "#",
+      github: "https://github.com/Askamar/Email_Spam_Detection",
       featured: false
     }
   ];

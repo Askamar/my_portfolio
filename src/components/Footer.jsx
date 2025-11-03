@@ -24,7 +24,7 @@ const Footer = () => {
     {
       icon: Mail,
       name: "Email",
-      url: "mailto:amarkhatal@example.com",
+      url: "mailto:amarkhatal2005@gmail.com",
       color: "hover:text-red-400"
     }
   ];
@@ -57,7 +57,7 @@ const Footer = () => {
               className="lg:col-span-2"
             >
               <h3 className="text-2xl font-bold gradient-text mb-4">
-                Amar Khatal
+                Amar
               </h3>
               <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
                 Aspiring AI Engineer. 
@@ -145,7 +145,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="text-gray-400 text-sm flex items-center gap-2"
             >
-              © {currentYear} Amar Khatal. Made with
+              © {currentYear} Amar. Made with
               <Heart size={16} className="text-red-500 animate-pulse" />
               and lots of coffee.
             </motion.p>

@@ -14,7 +14,7 @@ const Education = () => {
     location: "Pune, Maharashtra, India",
     period: "2023 - 2027",
     status: "Pursuing",
-    gpa: "8.5+",
+    gpa: "8.91",
     description: "Comprehensive program combining computer science fundamentals with business systems knowledge, preparing for roles in technology and business integration.",
     highlights: [
       "Strong foundation in programming languages (C, C++, Python)",
@@ -36,11 +36,11 @@ const Education = () => {
     { name: "Data Structures & Algorithms", status: "Completed" },
     { name: "Database Management Systems", status: "Completed" },
     { name: "Object-Oriented Programming", status: "Completed" },
-    { name: "Software Engineering", status: "In Progress" },
+    { name: "Software Engineering", status: "Completed" },
     { name: "Machine Learning", status: "In Progress" },
-    { name: "Business Systems Analysis", status: "Upcoming" },
-    { name: "Web Technologies", status: "Upcoming" },
-    { name: "Project Management", status: "Upcoming" }
+    { name: "Business Communication and Value Science", status: "Completed" },
+    { name: "System design and architecture", status: "Upcoming" },
+    { name: "Deep Learning", status: "Upcoming" }
   ];
 
   return (

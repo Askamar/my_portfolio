@@ -71,7 +71,7 @@ const About = () => {
                  <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
                    <img 
                      src="/profile-pic.jpg" 
-                     alt="Amar Khatal - AI Engineer, Software Developer, Data Analyst"
+                     alt="Amar - AI Engineer, Software Developer, Data Analyst"
                      className="w-full h-full object-cover object-center"
                      loading="lazy"
                    />

@@ -43,7 +43,7 @@ const Resume = () => {
     "Full-stack development skills",
     "8+ professional certifications",
     "Active in robotics and automation",
-    "Strong academic performance (8.5+ CGPA)",
+    "Strong academic performance (8.91 CGPA)",
     "Leadership and team collaboration experience"
   ];
 
@@ -98,7 +98,7 @@ const Resume = () => {
                     <FileText className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    Amar Khatal
+                    Amar
                   </h3>
                   <p className="text-primary-600 dark:text-primary-400 font-semibold">
                     AI Engineer | Software Developer | Data Analyst
@@ -195,11 +195,11 @@ const Resume = () => {
                 <div className="space-y-3 text-gray-600 dark:text-gray-300">
                   <p className="flex items-center gap-2">
                     <span className="font-semibold">Email:</span>
-                    <span>amarkhatal@example.com</span>
+                    <span>amarkhatal2005@gmail.com</span>
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="font-semibold">Phone:</span>
-                    <span>+91 98765 43210</span>
+                    <span>+91 8788354024</span>
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="font-semibold">Location:</span>
