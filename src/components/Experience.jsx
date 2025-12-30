@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Calendar, MapPin, Users, Award } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
+import { Calendar, MapPin, Building2, Briefcase, Award, ArrowUpRight } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 
 const Experience = () => {
   const ref = useRef(null);
@@ -10,215 +10,128 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Member",
+      role: "Club Member",
       company: "Janatics Automation & Robotics Club",
       location: "Pune, India",
       period: "2025 – Present",
-      type: "Current",
-      description: "Active member of the robotics club, contributing to automation projects and learning advanced robotics technologies. Participating in club activities, workshops, and collaborative projects.",
-      achievements: [
-        "Contributing to automation and robotics projects",
-        "Learning advanced robotics technologies",
-        "Participating in club workshops and activities"
-      ],
-      icon: Users,
-      color: "from-blue-500 to-blue-600"
+      type: "Extracurricular",
+      description: "Contributing to advanced automation projects and exploring cutting-edge robotics. Actively participating in technical workshops to master industrial automation systems.",
+      skills: ["Robotics", "Automation", "Embedded C"],
+      logo: "J",
+      color: "from-blue-500 to-indigo-600"
     },
     {
       id: 2,
-      title: "Intern",
+      role: "EdTech Intern",
       company: "Edunet Foundation",
       location: "Remote",
       period: "2025",
       type: "Internship",
-      description: "Completed internship focusing on educational technology and digital learning solutions. Gained hands-on experience in developing educational platforms and tools.",
-      achievements: [
-        "Developed educational technology solutions",
-        "Worked on digital learning platforms",
-        "Gained experience in educational software development"
-      ],
-      icon: Award,
-      color: "from-green-500 to-green-600"
+      description: "Collaborated on digital learning solutions to enhance educational accessibility. Gained hands-on experience in cloud-based tools and content management systems for scale.",
+      skills: ["EdTech", "Cloud Tools", "Content Mgmt"],
+      logo: "E",
+      color: "from-green-500 to-teal-600"
     },
     {
       id: 3,
-      title: "Digital Team Member",
+      role: "Digital Team Member",
       company: "ACBS RSCOE",
       location: "Pune, India",
       period: "2024 – 2025",
-      type: "Leadership",
-      description: "Part of the digital team responsible for managing the college's digital presence and online activities. Led various digital initiatives and managed social media platforms.",
-      achievements: [
-        "Managed college's digital presence",
-        "Led digital marketing initiatives",
-        "Coordinated online events and activities"
-      ],
-      icon: Users,
-      color: "from-purple-500 to-purple-600"
+      type: "Volunteering",
+      description: "Spearheaded digital campaigns to boost the college's online footprint. Managed social media analytics and coordinated virtual events with high student engagement.",
+      skills: ["Digital Marketing", "Social Media", "Event Mgmt"],
+      logo: "A",
+      color: "from-purple-500 to-pink-600"
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8
-      }
-    }
-  };
-
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="container-custom section-padding">
+    <section id="experience" className="py-24 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-1/3 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl -translate-x-1/2" />
+
+      <div className="container-custom section-padding relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl font-bold mb-4"
-            >
-              My <span className="gradient-text">Experience</span>
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
-            >
-              A timeline of my professional journey and key achievements
-            </motion.p>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={isInView ? { width: "100px" } : { width: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto rounded-full mt-4"
-            />
-          </div>
+          <SectionHeader
+            title={<>Professional <span className="gradient-text">Experience</span></>}
+            subtitle="My journey through internships, leadership roles, and technical contributions."
+          />
 
           {/* Timeline */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            className="relative"
-          >
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 to-secondary-500 hidden md:block" />
+          <div className="relative">
+            {/* Center Line for Desktop */}
+            <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 md:-translate-x-1/2" />
 
-            {experiences.map((experience, index) => (
+            {experiences.map((exp, index) => (
               <motion.div
-                key={experience.id}
-                variants={itemVariants}
-                className="relative flex items-start mb-12 last:mb-0"
+                key={exp.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className={`relative flex items-start gap-8 md:gap-0 mb-12 md:mb-24 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
-                {/* Timeline Dot */}
-                <div className="hidden md:flex items-center justify-center w-16 h-16 bg-white dark:bg-gray-800 rounded-full border-4 border-primary-500 shadow-lg z-10">
-                  <experience.icon className="w-8 h-8 text-primary-600" />
-                </div>
+                {/* Timeline Dot (Center) */}
+                <div className="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white dark:bg-gray-900 border-4 border-primary-500 z-10 box-content shadow-[0_0_0_4px_rgba(255,255,255,1)] dark:shadow-[0_0_0_4px_rgba(17,24,39,1)]" />
 
-                {/* Content Card */}
-                <motion.div
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  className="flex-1 ml-0 md:ml-8 bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
-                >
-                  {/* Header */}
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                        {experience.title}
-                      </h3>
-                      <p className="text-lg font-semibold text-primary-600 dark:text-primary-400">
-                        {experience.company}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 mt-2 sm:mt-0">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${experience.color} text-white`}>
-                        {experience.type}
-                      </span>
-                    </div>
-                  </div>
+                {/* Content Block */}
+                <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'}`}>
+                  <div className={`p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow relative overflow-hidden group`}>
+                    {/* Gradient Top Line */}
+                    <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${exp.color}`} />
 
-                  {/* Meta Information */}
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <Calendar size={16} />
-                      <span>{experience.period}</span>
+                    <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                      <div className={`w-10 h-10 shrink-0 rounded-lg bg-gradient-to-br ${exp.color} text-white flex items-center justify-center font-bold text-lg shadow-md`}>
+                        {exp.logo}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
+                          {exp.role}
+                        </h3>
+                        <div className={`text-primary-600 dark:text-primary-400 font-medium text-sm flex items-center gap-1 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
+                          <Building2 size={14} /> {exp.company}
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin size={16} />
-                      <span>{experience.location}</span>
+
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                      {exp.description}
+                    </p>
+
+                    {/* Meta Stats */}
+                    <div className={`flex flex-wrap gap-4 text-xs text-gray-500 dark:text-gray-400 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
+                      <div className="flex items-center gap-1">
+                        <Calendar size={14} /> {exp.period}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <MapPin size={14} /> {exp.location}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Briefcase size={14} /> {exp.type}
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Description */}
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                    {experience.description}
-                  </p>
-
-                  {/* Achievements */}
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                      Key Achievements:
-                    </h4>
-                    <ul className="space-y-1">
-                      {experience.achievements.map((achievement, achievementIndex) => (
-                        <li key={achievementIndex} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
-                          <span className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-2 flex-shrink-0" />
-                          {achievement}
-                        </li>
+                    {/* Skills */}
+                    <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
+                      {exp.skills.map(skill => (
+                        <span key={skill} className="px-2 py-1 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-xs rounded border border-gray-100 dark:border-gray-700">
+                          {skill}
+                        </span>
                       ))}
-                    </ul>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="text-center mt-12"
-          >
-            <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-2xl p-8 border border-primary-200 dark:border-primary-800">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Ready for New Opportunities
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-                I'm actively seeking internships and opportunities in AI, Data Science, and Software Development. 
-                Let's discuss how I can contribute to your team!
-              </p>
-              <motion.button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300"
-              >
-                Get In Touch
-              </motion.button>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

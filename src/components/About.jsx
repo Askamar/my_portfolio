@@ -1,37 +1,39 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code, Database, Brain, Cpu } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
+import { Code, Database, Brain, Rocket, Globe } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const interests = [
+  const stats = [
+    { label: 'Years Experience', value: '2+' },
+    { label: 'Projects Built', value: '20+' },
+    { label: 'Hackathons', value: '5+' },
+    { label: 'Certifications', value: '10+' }
+  ];
+
+  const services = [
     {
       icon: Brain,
-      title: "AI & Machine Learning",
-      description: "Exploring the frontiers of artificial intelligence and developing intelligent solutions"
-    },
-    {
-      icon: Database,
-      title: "Data Analysis",
-      description: "Transforming raw data into actionable insights and meaningful patterns"
+      title: "AI Solutions",
+      desc: "Building smart models for real-world problems."
     },
     {
       icon: Code,
-      title: "Software Development",
-      description: "Building robust and scalable applications with modern technologies"
+      title: "Full Stack",
+      desc: "Scalable web apps with React & Node.js."
     },
     {
-      icon: Cpu,
-      title: "Automation & Robotics",
-      description: "Creating automated systems that enhance efficiency and productivity"
+      icon: Database,
+      title: "Data Analytics",
+      desc: "Turning raw data into actionable business insights."
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+    <section id="about" className="py-24 bg-white dark:bg-gray-900 relative">
       <div className="container-custom section-padding">
         <motion.div
           ref={ref}
@@ -40,147 +42,97 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl font-bold mb-4"
-            >
-              About <span className="gradient-text">Me</span>
-            </motion.h2>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={isInView ? { width: "100px" } : { width: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto rounded-full"
-            />
-          </div>
+          <SectionHeader
+            title={<>About <span className="gradient-text">Me</span></>}
+            subtitle="A glimpse into my journey, my values, and the technology that drives me forward."
+          />
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Profile Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative"
-            >
-                             <div className="relative w-80 h-80 mx-auto lg:mx-0">
-                 {/* Profile Image */}
-                 <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
-                   <img 
-                     src="/Amar_profile_pic.png" 
-                     alt="Amar Khatal - AI Engineer, Software Developer, Data Analyst"
-                     className="w-full h-full object-cover object-center"
-                     loading="lazy"
-                   />
-                 </div>
-                
-                {/* Floating elements */}
-                <motion.div
-                  animate={{ 
-                    y: [0, -10, 0],
-                    rotate: [0, 5, 0]
-                  }}
-                  transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center shadow-lg"
-                >
-                  <Brain className="w-8 h-8 text-white" />
-                </motion.div>
-                
-                <motion.div
-                  animate={{ 
-                    y: [0, 10, 0],
-                    rotate: [0, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1
-                  }}
-                  className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-secondary-500 to-primary-500 rounded-full flex items-center justify-center shadow-lg"
-                >
-                  <Code className="w-6 h-6 text-white" />
-                </motion.div>
-              </div>
-            </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left Column: Image & Personal Details */}
+            <div className="relative">
+              {/* Main Image Frame (Abstract if no real image, or stylized) */}
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+                transition={{ delay: 0.2 }}
+                className="relative z-10 w-full max-w-md mx-auto aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border-4 border-white dark:border-gray-800 shadow-2xl"
+              >
+                {/* Placeholder for Profile */}
+                <img
+                  src="/Amar_profile_pic.png"
+                  alt="Amar Khatal"
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                />
 
-            {/* About Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="space-y-6"
-            >
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Passionate about Technology & Innovation
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
-                  I'm a dedicated Computer Science student with a passion for artificial intelligence, 
-                  data analysis, and software development. Currently pursuing my B.Tech in CSBS at 
-                  JSPM's Rajarshi Shahu College of Engineering, I'm constantly exploring new 
-                  technologies and methodologies to solve real-world problems.
-                </p>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-                  My journey in technology spans across multiple domains - from building intelligent 
-                  systems and analyzing complex datasets to developing robust software solutions. 
-                  I believe in the power of automation and AI to transform businesses and create 
-                  meaningful impact in society.
-                </p>
-              </div>
-
-              {/* Key Interests */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-                {interests.map((interest, index) => (
-                  <motion.div
-                    key={interest.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                    whileHover={{ scale: 1.05, y: -5 }}
-                    className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 border border-gray-200 dark:border-gray-700"
-                  >
-                    <div className="flex items-start space-x-3">
-                      <div className="p-2 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-                        <interest.icon className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
-                          {interest.title}
-                        </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          {interest.description}
-                        </p>
-                      </div>
+                {/* Floating Badge */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-full text-green-600 dark:text-green-400">
+                      <Globe size={20} />
                     </div>
-                  </motion.div>
+                    <div>
+                      <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Based in</p>
+                      <p className="font-bold text-gray-900 dark:text-white">Pune, India</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Decorative Elements behind image */}
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl -z-10" />
+              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary-500/20 rounded-full blur-3xl -z-10" />
+            </div>
+
+            {/* Right Column: Narrative & Stats */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+                  Driven by <span className="text-primary-600">Innovation</span>, <br />
+                  Grounded in <span className="text-secondary-600">Engineering</span>.
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+                  I am a Computer Science undergraduate specializing in <strong>Business Systems</strong>.
+                  My passion lies at the intersection of AI and practical software engineering.
+                  I don't just write code; I build systems that solve tangible problems.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  From winning hackathons to deploying machine learning models, my journey is defined by a
+                  relentless curiosity. I am currently focused on mastering <strong>Generative AI</strong> and
+                  <strong>Scalable Architectures</strong> to create the next generation of digital products.
+                </p>
+              </div>
+
+              {/* Quick Stats Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 border-y border-gray-100 dark:border-gray-800">
+                {stats.map((stat, i) => (
+                  <div key={i} className="text-center">
+                    <div className="text-2xl md:text-3xl font-bold bg-gradient-to-br from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-1">
+                      {stat.label}
+                    </div>
+                  </div>
                 ))}
               </div>
 
-              {/* Call to Action */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.8, delay: 1.1 }}
-                className="pt-6"
-              >
-                <motion.button
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300"
-                >
-                  Let's Connect
-                </motion.button>
-              </motion.div>
-            </motion.div>
+              {/* Focus Areas */}
+              <div>
+                <h4 className="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <Rocket size={16} className="text-primary-500" />
+                  What I Do
+                </h4>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {services.map((item) => (
+                    <div key={item.title} className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-800 transition-colors">
+                      <item.icon size={24} className="text-gray-700 dark:text-gray-200 mb-3" />
+                      <h5 className="font-bold text-sm text-gray-900 dark:text-white mb-1">{item.title}</h5>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 leading-snug">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
